@@ -1,0 +1,8 @@
+1. Ask about how her customers will get the books after purchasing them
+2. Set up a payment gateway
+
+
+/* Info For Me */
+
+Rework The payment pages to be more inline with
+the ozow requirements.
