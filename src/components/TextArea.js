@@ -1,14 +1,6 @@
 import { useEffect, useState } from "react";
 
-function TextArea({
-  placeholder,
-  name,
-  id,
-  onChange,
-  value,
-  required,
-  onKeyDown,
-}) {
+function TextArea({ placeholder, id, value, ...rest }) {
   const [label, setLabel] = useState(false);
 
   useEffect(() => {
@@ -23,12 +15,9 @@ function TextArea({
           label && "pt-6"
         }`}
         id={id}
-        name={name}
-        value={value}
-        onChange={onChange}
         placeholder={placeholder}
-        onKeyDown={onKeyDown}
-        required={required}
+        value={value}
+        {...rest}
       />
       <label
         className={`px-3 py-0.5 w-full absolute top-0 left-0 z-10 text-xs text-gray-50 bg-gray-600 items-center rounded-t-md font-poppins ${

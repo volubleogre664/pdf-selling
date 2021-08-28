@@ -52,7 +52,10 @@ function ViewBook({ history }) {
       <div className="flex place-items-center w-fit m-auto gap-7">
         <img
           src={book?.frontCoverUrl}
-          alt="Databases With SQL: An Introduction to MYSQL and PHP"
+          alt={
+            book?.title ||
+            "Databases With SQL: An Introduction to MYSQL and PHP"
+          }
           loading="lazy"
           className={`mt-2 line-clamp-2 overflow-hidden w-4/5 xsm:w-2/5 ${
             screen < 550 && !isFrontCover && "hidden sr-only"
@@ -60,7 +63,10 @@ function ViewBook({ history }) {
         />
         <img
           src={book?.backCoverUrl}
-          alt="Databases With SQL: An Introduction to MYSQL and PHP"
+          alt={
+            book?.title ||
+            "Databases With SQL: An Introduction to MYSQL and PHP"
+          }
           className={`mt-2 line-clamp-2 overflow-hidden w-4/5 xsm:w-2/5 ${
             screen < 550 && isFrontCover && "hidden sr-only"
           } `}
